@@ -43,6 +43,30 @@ header{
     padding: 2rem 1rem;
 }
 #logo {max-width: 15rem;}
+header button{
+    position: relative;
+    min-width: 3rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+header button span{
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 50%;
+    padding: 0.3rem;
+    box-sizing: border-box;
+    position: absolute;
+    top: -0.4rem;
+    left: -0.9rem;
+    
+}
 #carticon {max-width: 3rem;}
 
 
@@ -55,20 +79,81 @@ ul{
     display: flex;
     gap: 1rem;
 }
-ul li{
-    
-}
 
 nav a{
     display: inline-block;
     padding: 1rem;
+    padding-top: calc(1rem + 4px);
     text-decoration: none;
     color: var(--white);
     text-transform: uppercase;
+    box-sizing: border-box;
+    border-bottom: 4px  solid var(--red);  
+
 }
 
-nav a:focus{
+nav a:hover{
     background-color: var(--yellow);
     color: var(--black);
-    border-bottom: var(--black) solid 9px;
+    border-bottom: 4px  solid var(--black);  
+}
+
+/* KATEGORISIDE */
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding: 1rem;
+    
+}
+main h2{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+main article{
+    max-width: 30%;
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: var(--black);
+    border-bottom: 1rem solid var(--green);
+    color: var(--white);
+
+}
+
+main article img{
+    max-width: 100%;
+    height: auto;
+}
+
+main article a{
+    color: var(--yellow);
+    text-decoration: none;
+    font-size: 1rem;
+    
+}
+
+main article h3{
+    margin: 0.25rem 0 ;
+    text-transform: uppercase;
+}
+
+main article span{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+main article button{
+    background-color: var(--green);
+    padding: 0.5rem 1rem;
+    border: none;
+    font-family: var(--font);
+    color: var(--white);
+    font-size: var(--rootsize);
+    cursor: pointer;
+
 }
