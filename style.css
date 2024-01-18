@@ -73,7 +73,7 @@ header button span{
 #cart{
     position: absolute;
     top: 4.75rem;
-    right: 0;
+    right: -500px;
     padding: 1rem;
     background-color: var(--black);
     color: var(--white);
@@ -81,8 +81,13 @@ header button span{
     max-width: 500px;
     border-left: 0.5rem solid var(--green);
     border-bottom: 0.5rem solid var(--green);
+    opacity: 0;
+    transition: ease-in-out .5s;
 }
-
+#cart.show{
+    opacity: 1;
+    right: 0;
+}
 #cart h2{
     font-size: 1.2rem;
 }
@@ -154,6 +159,12 @@ nav a{
 }
 
 nav a:hover{
+    background-color: var(--yellow);
+    color: var(--black);
+    border-bottom: 4px  solid var(--black);  
+}
+
+nav a:focus{
     background-color: var(--yellow);
     color: var(--black);
     border-bottom: 4px  solid var(--black);  
